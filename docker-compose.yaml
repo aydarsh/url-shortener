@@ -1,0 +1,19 @@
+services:
+  db:
+    image: bitnami/postgresql:14
+    ports:
+      - "15432:5432"
+    volumes:
+      - postgresql_data:/bitnami/postgresql
+    environment:
+      - POSTGRESQL_USERNAME=user
+      - POSTGRESQL_PASSWORD=user123
+      - POSTGRESQL_DATABASE=url
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "16379:6379"
+
+volumes:
+  postgresql_data:
+    driver: local

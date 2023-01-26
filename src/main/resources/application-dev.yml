@@ -1,0 +1,10 @@
+spring:
+  dataSource:
+    username: user
+    password: user123
+    url: jdbc:postgresql://localhost:15432/url
+  flyway:
+    enabled: true
+springdoc:
+  swagger-ui:
+    tryItOutEnabled: true
